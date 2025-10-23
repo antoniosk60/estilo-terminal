@@ -1,0 +1,185 @@
+
+/* Estilo Hacker Neon Extremo */
+:root{
+  --bg:#010101;
+  --panel:#0a0a0a;
+  --neon-primary:#00FFFF;  /* Azul eléctrico */
+  --neon-accent:#00FF00;   /* Verde hacker */
+  --neon-secondary:#FF00FF; /* Magenta neón */
+  --muted:#8AFFD8;
+  --glass: rgba(255,255,255,0.02);
+}
+
+body.neon-body{
+  background: radial-gradient(circle at top left, rgba(0,255,255,0.04), transparent 20%),
+              radial-gradient(circle at bottom right, rgba(0,255,0,0.03), transparent 20%),
+              var(--bg);
+  color: var(--muted);
+  min-height:100vh;
+  font-family: 'Courier New', monospace;
+  -webkit-font-smoothing: antialiased;
+}
+
+.neon-navbar{
+  background: linear-gradient(90deg, rgba(0,0,0,0.9), rgba(0,0,0,0.6));
+  box-shadow: 0 0 30px var(--neon-accent);
+  border-bottom: 1px solid var(--neon-primary);
+}
+
+.neon-logo{
+  color: var(--neon-primary);
+  text-shadow: 0 0 12px var(--neon-primary), 0 0 20px var(--neon-accent), 0 0 30px var(--neon-secondary);
+  letter-spacing: 0.5px;
+}
+
+.neon-hero{
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.6));
+  border-radius: 12px;
+  margin: 24px;
+  padding: 48px;
+  box-shadow: 0 8px 50px var(--neon-primary), 0 0 50px var(--neon-accent) inset;
+}
+
+.neon-title{
+  color: var(--neon-primary);
+  text-shadow:
+    0 0 6px var(--neon-primary),
+    0 0 12px var(--neon-accent),
+    0 0 24px var(--neon-secondary),
+    0 0 40px var(--neon-accent);
+}
+
+.neon-sub{ color: var(--muted); }
+
+.neon-btn{
+  background: linear-gradient(90deg,var(--neon-primary),var(--neon-accent));
+  color: #001217;
+  font-weight:700;
+  box-shadow: 0 0 20px var(--neon-primary), 0 0 30px var(--neon-accent);
+  border: none;
+  text-shadow: none;
+  transition: all 0.3s ease;
+}
+.neon-btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 30px var(--neon-primary), 0 0 40px var(--neon-accent);
+}
+
+.neon-outline{
+  color: var(--neon-primary);
+  border: 1px solid var(--neon-accent);
+  background: transparent;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 0 rgba(0,255,255,0);
+}
+.neon-outline:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px var(--neon-accent), 0 0 30px var(--neon-primary);
+  background: rgba(0,255,255,0.05);
+}
+
+.neon-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid var(--neon-accent);
+  transition: transform .25s ease, box-shadow .25s ease;
+  border-radius: 12px;
+}
+.neon-card:hover{
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 14px 50px var(--neon-primary), 0 0 50px var(--neon-accent);
+}
+
+.neon-card-title{ color: var(--neon-accent); text-shadow: 0 0 10px var(--neon-accent); }
+.neon-heading{ color: var(--neon-primary); text-shadow: 0 0 12px var(--neon-primary),0 0 24px var(--neon-accent); }
+
+.neon-text{ color: var(--muted); }
+.neon-list li{ margin:6px 0; }
+
+.neon-img{ box-shadow: 0 10px 40px var(--neon-primary), 0 0 40px var(--neon-accent); border-radius:8px; }
+
+.neon-footer{
+  background: linear-gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+  color: #8affd8;
+  border-top: 1px solid var(--neon-accent);
+  text-shadow: 0 0 10px var(--neon-accent);
+}
+
+/* Forms dark */
+.form-control-dark{
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--neon-accent);
+  color: var(--muted);
+}
+.form-control-dark:focus{
+  box-shadow: 0 0 20px var(--neon-accent);
+  border-color: var(--neon-primary);
+}
+
+/* Table neon */
+.neon-table-wrap{ overflow:auto; }
+.neon-table th, .neon-table td{
+  border-color: rgba(0,255,255,0.08) !important;
+}
+.neon-alert{
+  background: linear-gradient(90deg, rgba(0,255,0,0.05), rgba(0,255,255,0.03));
+  color: #c9ffff;
+  border: 1px solid var(--neon-accent);
+}
+
+/* Terminal speaker styles */
+.terminal{
+  background: linear-gradient(180deg, rgba(0,255,0,0.02), rgba(0,255,255,0.01));
+  border: 1px solid rgba(0,255,0,0.08);
+  min-height:120px;
+  color: #bfffe6;
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+  position: relative;
+}
+.terminal-output{
+  white-space: pre-wrap;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 6px;
+  min-height:80px;
+  text-shadow: 0 0 8px rgba(0,255,255,0.06);
+}
+
+/* Cursor flicker */
+.terminal-output::after{
+  content: '|';
+  display: inline-block;
+  margin-left:6px;
+  opacity: 0.9;
+  animation: blink 1s steps(2,end) infinite;
+  color: var(--neon-primary);
+  text-shadow: 0 0 10px var(--neon-primary);
+}
+
+@keyframes blink{
+  0%{opacity:1}
+  50%{opacity:0}
+  100%{opacity:1}
+}
+
+/* Flicker effect for headings while speaking */
+.flicker{
+  animation: flickerAnimation 1.8s infinite;
+  text-shadow: 0 0 10px var(--neon-primary), 0 0 20px var(--neon-accent);
+}
+
+@keyframes flickerAnimation{
+  0%{opacity:1;text-shadow:0 0 12px var(--neon-primary)}
+  50%{opacity:0.85;text-shadow:0 0 6px var(--neon-accent)}
+  100%{opacity:1;text-shadow:0 0 12px var(--neon-primary)}
+}
+
+/* small neon glows */
+.neon-small{ color: var(--neon-accent); }
+
+/* responsive tweaks */
+@media (max-width:768px){
+  .neon-hero{ padding: 28px; margin: 12px; }
+}

@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inicio | Programación: el arte del código</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/906/906324.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-dark neon-body">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark neon-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold neon-logo" href="index.html">Programación: el arte del código</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="tabla.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="text-center p-5 neon-hero animate__animated animate__fadeInDown">
+    <div class="container">
+      <h1 class="display-4 fw-bold neon-title flicker">Bienvenido — Antonio Flores Ángel Fernando</h1>
+      <p class="lead neon-sub">Soy alumno del grupo <strong>3A PRVC</strong>. Estudio la carrera de <strong>Técnico en Programación</strong>. Esta web muestra lo esencial de la programación.</p>
+      <a href="galeria.html" class="btn neon-btn btn-lg mt-3 animate__animated animate__pulse animate__infinite">Ir a la galería</a>
+    </div>
+  </header>
+
+  <!-- CONTENIDO -->
+  <section class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <h2 class="fw-bold neon-heading">¿Qué es la programación?</h2>
+        <p class="neon-text">La programación es el proceso de crear instrucciones que una computadora puede ejecutar. Permite resolver problemas, automatizar tareas y construir aplicaciones, sitios web y sistemas. Aprender programación desarrolla pensamiento lógico y creatividad.</p>
+
+        <h3 class="mt-4 neon-small">Lenguajes comunes</h3>
+        <ul class="neon-list">
+          <li><strong>HTML:</strong> estructura de páginas web.</li>
+          <li><strong>CSS:</strong> estilos visuales.</li>
+          <li><strong>JavaScript:</strong> interactividad en la web.</li>
+          <li><strong>Python:</strong> fácil de aprender, usado en datos y automatización.</li>
+        </ul>
+      </div>
+
+      <div class="col-md-6 text-center">
+        <img src="https://picsum.photos/600/400?random=7" class="img-fluid rounded shadow neon-img" alt="Imagen programación">
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDS DESTACADAS -->
+  <section class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card neon-card p-3">
+          <div class="card-body text-center">
+            <h5 class="card-title neon-card-title">Aprende a pensar</h5>
+            <p class="card-text neon-text">La programación enseña a descomponer problemas y diseñar soluciones paso a paso.</p>
+            <a class="btn neon-outline" href="tabla.html">Ver lenguajes</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card neon-card p-3">
+          <div class="card-body text-center">
+            <h5 class="card-title neon-card-title">Proyectos reales</h5>
+            <p class="card-text neon-text">Construye páginas, apps y automatizaciones para tu portafolio.</p>
+            <a class="btn neon-outline" href="galeria.html">Ver galería</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card neon-card p-3">
+          <div class="card-body text-center">
+            <h5 class="card-title neon-card-title">Únete al equipo</h5>
+            <p class="card-text neon-text">Comparte tu código, colabora y aprende con tus compañeros del CBTA.</p>
+            <a class="btn neon-outline" href="contacto.html">Contactar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERMINAL SPEAKER -->
+  <section class="container my-4">
+    <div class="terminal p-4 rounded shadow-sm">
+      <div id="terminal-output" class="terminal-output"></div>
+      <div class="terminal-controls mt-3 text-end">
+        <button id="btn-speech" class="btn neon-outline">🔊 Escuchar</button>
+        <button id="btn-stop" class="btn neon-outline">⏹ Detener</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="neon-footer text-center p-3 mt-5">
+    <p class="mb-0">Desarrollado por Antonio Flores Ángel Fernando — 3A PRVC 🧠💻 CBTA Leona Vicario</p>
+  </footer>
+
+<script>
+// Mensajes (separados por oraciones para sincronizar voz y texto)
+const mensajes = [
+  "Hola, soy Antonio Flores Ángel Fernando del grupo 3A PRVC.",
+  "Estudio la carrera de Técnico en Programación en CBTA Leona Vicario.",
+  "Bienvenido a mi proyecto web estilo hacker con colores neón y animaciones.",
+  "Aquí aprenderás sobre lenguajes, herramientas y cómo crear proyectos reales."
+];
+
+// Terminal and speech controls
+const terminalOutput = document.getElementById('terminal-output');
+const btnSpeech = document.getElementById('btn-speech');
+const btnStop = document.getElementById('btn-stop');
+
+let synth = window.speechSynthesis;
+let speaking = false;
+let stopRequested = false;
+
+// WebAudio click for typing sound
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+let audioCtx = null;
+function clickSound() {
+  if (!audioCtx) audioCtx = new AudioContext();
+  const o = audioCtx.createOscillator();
+  const g = audioCtx.createGain();
+  o.type = 'square';
+  o.frequency.value = 900;
+  g.gain.value = 0.02;
+  o.connect(g);
+  g.connect(audioCtx.destination);
+  o.start();
+  setTimeout(function(){ o.stop(); }, 50);
+}
+
+// Typing effect for a given text
+function typeText(text, speed=20) {
+  return new Promise(function(resolve) {
+    terminalOutput.innerHTML = '';
+    let i = 0;
+    function step(){
+      if (stopRequested) { resolve(); return; }
+      if (i < text.length) {
+        terminalOutput.innerHTML += text.charAt(i) === ' ' ? '&nbsp;' : text.charAt(i);
+        // play click sparsely to avoid noise on spaces
+        if (text.charAt(i) !== ' ' && Math.random() > 0.35) clickSound();
+        terminalOutput.scrollTop = terminalOutput.scrollHeight;
+        i++;
+        setTimeout(step, speed + Math.random()*30);
+      } else {
+        resolve();
+      }
+    }
+    step();
+  });
+}
+
+// Speak a single sentence and type it simultaneously
+function speakAndType(sentence) {
+  return new Promise(function(resolve) {
+    if (!('speechSynthesis' in window)) { resolve(); return; }
+    const utter = new SpeechSynthesisUtterance(sentence);
+    utter.lang = 'es-MX';
+    utter.rate = 0.95;
+    utter.pitch = 1.05;
+    utter.onend = function(){ resolve(); };
+    // Start typing in parallel (but ensure it doesn't outrun voice too much)
+    const typingPromise = typeText(sentence, 20);
+    synth.speak(utter);
+    // In case typing finishes earlier, wait for utter.onend
+    utter.onend = function(){ resolve(); };
+  });
+}
+
+// Sequence speak all messages
+async function speakAll() {
+  if (!('speechSynthesis' in window)) return;
+  stopRequested = false;
+  speaking = true;
+  btnSpeech.innerText = '🔊 Hablando...';
+  for (let i = 0; i < mensajes.length; i++) {
+    if (stopRequested) break;
+    await speakAndType(mensajes[i]);
+    // small pause between phrases
+    await new Promise(function(r){setTimeout(r, 600);});
+  }
+  speaking = false;
+  btnSpeech.innerText = '🔊 Escuchar';
+}
+
+// Stop speaking
+function stopAll() {
+  stopRequested = true;
+  if (synth && synth.speaking) synth.cancel();
+  btnSpeech.innerText = '🔊 Escuchar';
+  speaking = false;
+}
+
+// Button events
+btnSpeech.addEventListener('click', function(){ if (speaking) return; speakAll(); });
+btnStop.addEventListener('click', function(){ stopAll(); });
+
+// Auto play once after a short delay (user gesture policies may block autoplay on some browsers)
+window.addEventListener('load', function(){
+  setTimeout(function(){
+    try { speakAll(); } catch(e){ console.log('Auto-speech blocked', e); }
+  }, 1400);
+});
+</script>
+
+</body>
+</html>
